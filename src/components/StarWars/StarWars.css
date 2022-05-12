@@ -16,7 +16,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
-    color: blueviolet;
+    color: rgb(234, 120, 120);
+}
+.savedListHeader{
+    color: rgb(234, 120, 120);
 }
 input {
     background-color: skyblue;

@@ -1,5 +1,8 @@
-.StarChar > h2{
-    color: black;
+.StarChar{
+    border: 2px solid;
+}
+.StarChar > p{
+    color: white;
     
 }
 .firstName {

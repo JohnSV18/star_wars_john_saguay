@@ -5,14 +5,14 @@ function StarChar(props) {
     return(
         <div className="StarChar">
             <h1 className="firstName">Name: {props.name}</h1>
-            <h2 className="height">Height: {props.height}</h2>
-            <h2>Mass: {props.mass}</h2>
-            <h2>Hair Color: {props.hairColor}</h2>
-            <h2>Eye Color: {props.eyeColor}</h2>
-            <h3>Home World: {props.homeWorldName}</h3>
-            <h3>Home World Population: {props.homeWorldPopulation}</h3>
-            <h3>Home World Climate: {props.homeWorldClimate}</h3>
-            <h3>Home World Terrain: {props.homeWorldTerrain}</h3>
+            <p className="height">Height: {props.height}</p>
+            <p>Mass: {props.mass}</p>
+            <p>Hair Color: {props.hairColor}</p>
+            <p>Eye Color: {props.eyeColor}</p>
+            <p>Home World: {props.homeWorldName}</p>
+            <p>Home World Population: {props.homeWorldPopulation}</p>
+            <p>Home World Climate: {props.homeWorldClimate}</p>
+            <p>Home World Terrain: {props.homeWorldTerrain}</p>
             
         </div>
     )
