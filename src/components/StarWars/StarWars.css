@@ -1,0 +1,37 @@
+.StarWars {
+    color: red;
+}
+.StarCharData{
+    color: blueviolet;
+}
+.StarWars > form input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid;
+    margin: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+
+}
+.savedList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    color: blueviolet;
+}
+input {
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0;
+    cursor: pointer;
+}
+button {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid;
+    margin: 0;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
