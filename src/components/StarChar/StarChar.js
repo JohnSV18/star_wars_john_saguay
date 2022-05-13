@@ -13,6 +13,7 @@ function StarChar(props) {
             <p>Home World Population: {props.homeWorldPopulation}</p>
             <p>Home World Climate: {props.homeWorldClimate}</p>
             <p>Home World Terrain: {props.homeWorldTerrain}</p>
+            <p>Movies: {props.movieList}</p>
             
         </div>
     )

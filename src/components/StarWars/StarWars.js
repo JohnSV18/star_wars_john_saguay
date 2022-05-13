@@ -6,6 +6,7 @@ function StarWars() {
     const [number, setNumber] = useState(1);
     const [data, setData] = useState(null);
     const [list, setList] = useState([]);
+    const [movieList, setMovieList] = useState([]);
 
     function fetchData() {
 
@@ -26,12 +27,17 @@ function StarWars() {
                 const homeJson = data.json();
                 return homeJson;
             }).then((result) => {
-                console.log(result);
                 const homeWorldName = result.name;
                 const homeWorldPopulation = result.population;
                 const homeWorldClimate = result.climate;
                 const homeWorldTerrain = result.terrain;
-
+                Promise.all(films.map(film => fetch(film))).then((resArray) => {
+                    return Promise.all(resArray.map(res => res.json()));
+                }).then((filmsJSON) => {
+                    filmsJSON.map((film) => {
+                        setMovieList([...movieList, film.title])
+                    })
+                })
                 setData({
                     name,
                     height,
@@ -43,10 +49,12 @@ function StarWars() {
                     homeWorldName,
                     homeWorldPopulation,
                     homeWorldClimate,
-                    homeWorldTerrain
+                    homeWorldTerrain,
+                    movieList
                 })
             })
-            console.log(data);
+            // console.log(films);
+            console.log(movieList)
         })
     }
     return (
@@ -88,7 +96,7 @@ function StarWars() {
                     <div className='savedList'>
                         {list.map((item, index) => {
                             return <StarChar key={index} name={item.name} height={item.height} mass={item.mass} hairColor={item.hairColor} eyeColor={item.eyeColor} homeWorldName={item.homeWorldName}
-                            homeWorldPopulation={item.homeWorldPopulation} homeWorldClimate={item.homeWorldClimate} homeWorldTerrain={item.homeWorldTerrain} />
+                            homeWorldPopulation={item.homeWorldPopulation} homeWorldClimate={item.homeWorldClimate} homeWorldTerrain={item.homeWorldTerrain} movieList={item.movieList} />
                         })}
                     </div>
                 </div>
